@@ -22,15 +22,22 @@ JEST is a popular ***testing framework*** for JavaScript and the main purpose of
             - You just need more than one test suite for every problem that you have
 2. Create a file that will contain the test with the following syntax `sumArray.test.js`
     - Inside this file, write the following below, since we want to connect it to the file `sumArray.js`:
+
         ```
         const sumArray = require(../src/sumArray)
+        ```
 
         *the reason it's structured like this is because we have the file in another folder*
 
         **Structure that we want:**
+
+        ```
         test(`a description of what you want to test, which will show up in the console`, a function that gets called to run the test)
+        ```
 
         **What we want for this example:**
+
+        ```
         test(`properly clones array`, () => {
             const array = [1, 2, 3]
             expect(sumArray(array).toBe(newArray))
