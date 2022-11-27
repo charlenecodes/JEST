@@ -33,7 +33,7 @@ JEST is a popular ***testing framework*** for JavaScript and the main purpose of
         **What we want for this example:**
         test(`properly clones array`, () => {
             const array = [1, 2, 3]
-            expect(sumArray(array).toBe(6))
+            expect(sumArray(array).toBe(newArray))
         })
         ```
 3. You have to run npm install in order to add jest
