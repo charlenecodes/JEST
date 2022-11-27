@@ -32,13 +32,13 @@ JEST is a popular ***testing framework*** for JavaScript and the main purpose of
         **Structure that we want:**
 
         ```
-        test(`a description of what you want to test, which will show up in the console`, a function that gets called to run the test)
+        test("a description of what you want to test, which will show up in the console", a function that gets called to run the test)
         ```
 
         **What we want for this example:**
 
         ```
-        test(`properly clones array`, () => {
+        test("properly clones array", () => {
             const array = [1, 2, 3]
             expect(sumArray(array).toBe(newArray))
         })
@@ -47,7 +47,7 @@ JEST is a popular ***testing framework*** for JavaScript and the main purpose of
     - This must be done with every project in order to test the code with JEST
 4. Run `npm test` so JEST will run your test and see if it is correct
 
-**EXAMPLE OF A TEST**
+###EXAMPLE OF A TEST
 ```
 describe("Animals", () => {
     beforeEach(() => {
@@ -64,14 +64,27 @@ describe("Animals", () => {
     - `expect()`
         - We create assertions inside our `test()`, which will test the specific feature we want to check
             - `expect(2 + 2).toBe(4);`
-        - The `expect()`infertface allows you to assert that the values are what you expect them to be
+        - The `expect()`interface allows you to assert that the values are what you expect them to be
             - `toBe()`
             - `toBeDefined()`
             - `toHaveProperty()`
             - `toEqual()`
 
 ### Common JEST Methods
-- 
+- `expect(value)`
+- `.not`
+- `.toBe(value)`
+- `.toHaveReturned()`
+- `.toHaveLength(number)`
+- `.toBeDefined()`
+- `.toBeTruthy()`
+- `.toBeFalsy()`
+- `.toBeNull()`
+- `.toBeUndefined()`
+- `.toBeNaN()`
+- `.toEqual(value)`
+- `.toThrow(error?)`
+- and more on [JEST DOCUMENTATION](https://jestjs.io/docs/expect)
 
 ### Structuring the Repository
 - What the contents should be:
