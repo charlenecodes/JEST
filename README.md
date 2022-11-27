@@ -47,7 +47,7 @@ JEST is a popular ***testing framework*** for JavaScript and the main purpose of
     - This must be done with every project in order to test the code with JEST
 4. Run `npm test` so JEST will run your test and see if it is correct
 
-###EXAMPLE OF A TEST
+### EXAMPLE OF A TEST
 ```
 describe("Animals", () => {
     beforeEach(() => {
@@ -65,10 +65,16 @@ describe("Animals", () => {
         - We create assertions inside our `test()`, which will test the specific feature we want to check
             - `expect(2 + 2).toBe(4);`
         - The `expect()`interface allows you to assert that the values are what you expect them to be
-            - `toBe()`
             - `toBeDefined()`
             - `toHaveProperty()`
+            - `toBe()`
+                - Compares the referential identity of values
+                    - Whether they are stored in the same memory? Passed by reference vs. by value?
             - `toEqual()`
+                - Compares primitive values
+                - Doesn't perform deep equality check
+            - `toStrictEqual()`
+                - Also checks if the objects have the same type
 
 ### Common JEST Methods
 - `expect(value)`
