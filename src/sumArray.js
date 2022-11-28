@@ -1,20 +1,19 @@
 function sumArray(array){
-    let arrayLength = array.length
+    let result = 0;
     for (let num of array) {
-       if (typeof num === "number") {
-            if (arrayLength > 1) {
-                let sum;
-                sum += num;
-                return sum;
-            } else if (arrayLength = 0) {
-                return 0;
-            } else if (arrayLength = 1) {
-                return array[0];
+        if (typeof num === "number") {
+            if (array.length === 0) {
+                result = 0;
+            } else if (array.length === 1) {
+                result = array[0]
+            } else if (array.length > 1) {
+                result += num;
             }
         } else {
-            return NaN;
+            result = NaN;
         }
     }
+    return result;
 }
 
 
